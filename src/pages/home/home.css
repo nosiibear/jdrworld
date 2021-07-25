@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+  }
+  
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ddd;
+}
+
+.homeContent {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+}
+
+.fiberTopBar {
+  background: black;
+  height: 60px;
+  margin-top: 80px;
+  border-radius: 2px;
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.fiberTopLeft {
+  color: white;
+  flex: 3;
+}
+
+.fiberTopCenter {
+  flex: 6;
+}
+
+.fiberTopList {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fiberTopListItem {
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  cursor: pointer;
+  color: white;
+}
+
+.fiberTopRight {
+  display: flex;
+  flex: 3;
+}
+
+.titleText {
+  font-size: 96px;
+  font-weight: 800;
+  letter-spacing: -4px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.linkButtonContainer {
+  display: block;
+}
+
+.linkButton {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  margin: 12px 0px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  padding: 10px 20px 10px 20px;
+  box-shadow: inset 0px 0px 0px black;
+  transition: box-shadow ease-out .2s,
+              padding ease-out .2s,
+              margin ease-out .2s, 
+}
+
+.linkButton:hover {
+  background: white;
+  color: black;
+  box-shadow: inset 0px -8px 0px black;
+  padding: 10px 20px 18px 20px;
+  margin: 8px 0px;
+}
+
+.btnIcon {
+  margin-left: 10px;
+  font-size: 14px;
+  pointer-events: none;
+}
