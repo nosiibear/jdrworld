@@ -195,16 +195,16 @@ export default function Home() {
             <div className="fiberTopCenter">
               <ul className="fiberTopList">
                 <li className="fiberTopListItem">
-                    <div className="link" to="/">Portfolio</div>
+                    <div className="link" onClick={() => window.appHistory.push("/portfolio")}>Portfolio</div>
                 </li>
                 <li className="fiberTopListItem">
-                    <div className="link" to="/">Projects</div>
+                    <div className="link" onClick={() => window.appHistory.push("/projects")}>Projects</div>
                 </li>
                 <li className="fiberTopListItem">
-                    <div className="link" to="/">Blog</div>
+                    <div className="link" onClick={() => window.appHistory.push("/blog")}>Blog</div>
                 </li>
                 <li className="fiberTopListItem">
-                    <div className="link" to="/">About</div>
+                    <div className="link" onClick={() => window.appHistory.push("/about")}>About</div>
                 </li>
               </ul>
             </div>
@@ -216,38 +216,37 @@ export default function Home() {
             ROBINSON
           </div>
           <div className="linkButtonContainer">
-            <div>
+            <div className="screenTrigger"
+                 onPointerOver={() => {setBlack("false"); setVideoName("about")}}
+                 onPointerOut={() => setBlack("true")}>
               <button className="linkButton"
-                      onPointerOver={() => {setBlack("false"); setVideoName("about")}}
-                      onPointerOut={() => setBlack("true")}
-              >
+                      onClick={() => window.appHistory.push("/about")}>
                 About me
               <i className="btnIcon fas fa-angle-right"></i>
             </button>
             </div>
-            <div>
+            <div className="screenTrigger"
+                 onPointerOver={() => {setBlack("false"); setVideoName("/portfolio.mp4")}}
+                 onPointerOut={() => setBlack("true")}>
               <button className="linkButton"
-                      onPointerOver={() => {setBlack("false"); setVideoName("/portfolio.mp4")}}
-                      onPointerOut={() => setBlack("true")} 
-                      onClick={() => window.appHistory.push("/portfolio")}
-              >
+                      onClick={() => window.appHistory.push("/portfolio")}>
                 Portfolio
               <i className="btnIcon fas fa-angle-right"></i>
             </button></div>
-            <div>
+            <div className="screenTrigger"
+                 onPointerOver={() => {setBlack("false"); setVideoName("//dm0qx8t0i9gc9.cloudfront.net/watermarks/videoGTYSdDW/videoblocks-gili-meno-turtles-underwater-360-vr-underwater-360-vr_H5tBLnQaW__25198781bb64ff033995b16494232071__P640.mp4")}}
+                 onPointerOut={() => setBlack("true")}>
               <button className="linkButton"
-                      onPointerOver={() => {setBlack("false"); setVideoName("//dm0qx8t0i9gc9.cloudfront.net/watermarks/videoGTYSdDW/videoblocks-gili-meno-turtles-underwater-360-vr-underwater-360-vr_H5tBLnQaW__25198781bb64ff033995b16494232071__P640.mp4")}}
-                      onPointerOut={() => setBlack("true")}
-              >
+                      onClick={() => window.appHistory.push("/projects")}>
                 Projects
               <i className="btnIcon fas fa-angle-right"></i>
             </button>
             </div>
-            <div>
+            <div className="screenTrigger"
+                 onPointerOver={() => {setBlack("false"); setVideoName("blog")}}
+                 onPointerOut={() => setBlack("true")}>
               <button className="linkButton"
-                      onPointerOver={() => {setBlack("false"); setVideoName("blog")}}
-                      onPointerOut={() => setBlack("true")}
-              >
+                      onClick={() => window.appHistory.push("/blog")}>
                 Blog
               <i className="btnIcon fas fa-angle-right"></i>
             </button>

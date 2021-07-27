@@ -1,6 +1,10 @@
 import TopBar from "./components/topbar/TopBar";
 import Home from "./pages/home/Home";
 import Portfolio from "./pages/portfolio/Portfolio";
+import IconTest from "./pages/IconTest";
+import WriteTest from "./pages/writeTest/WriteTest";
+import Blog from "./pages/blog/Blog";
+import Single from "./pages/single/Single";
 import {
   BrowserRouter as Router,
   Switch,
@@ -24,26 +28,47 @@ function App() {
         <Route path="/portfolio">
           <Portfolio/>
         </Route>
+        <Route path="/iconTest">
+          <IconTest/>
+        </Route>
         {/*<Route path="/projects">
           <Projects/>
-        </Route>
+        </Route>*/}
         <Route path="/blog">
           <Blog/>
         </Route>
+        {/*<Route path="/about">
+          <About/>
+        </Route>*/}
         <Route path="/post/:postId">
           <Single/>
         </Route>
+        {/*<Route path="/user/:username">
+          {user ? <Settings/> : <Login/>}
+        </Route>
         <Route path="/write">
-          {user ? <Write/> : <Register/>}
+          {user ? <Write/> : <Login/>}
+        </Route>*/}
+        <Route path="/writeTest">
+          <WriteTest/>
+        </Route>
+        {/*<Route path="/login">
+          {user ? <Home/> : <Login/>}
         </Route>
         <Route path="/register">
           {user ? <Home/> : <Register/>}
         </Route>
-        <Route path="/login">
-          {user ? <Home/> : <Login/>}
+        <Route path="/changeUsername">
+          {user ? <ChangeUsername/> : <Login/>}
+        </Route>
+        <Route path="/resetEmail">
+          {user ? <ResetEmail/> : <Login/>}
+        </Route>
+        <Route path="/resetPassword">
+          {user ? <ResetPassword/> : <Login/>}
         </Route>
         <Route path="/settings">
-          {user ? <Settings/> : <Register/>}
+          {user ? <Settings/> : <Login/>}
         </Route>*/}
       </Switch>
     </>

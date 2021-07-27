@@ -26,19 +26,23 @@ export default function TopBar() {
                 <i className="topIcon fab fa-instagram-square"></i>
             </div>
             <div className="topCenter">
+                <div className="topCenterIcon">hey</div>
                 <ul className="topList">
                     <li className="topListItem">
-                        <Link className="link" to="/">HOME</Link>
+                        <Link className="link" to="/">Home</Link>
                     </li>
                     <li className="topListItem">
-                        <Link className="link" to="/write">WRITE</Link>
-                        </li>
+                        <Link className="link" to="/portfolio">Portfolio</Link>
+                    </li>
                     <li className="topListItem">
-                        <Link className="link" to="/">ABOUT</Link>
-                        </li>
+                        <Link className="link" to="/projects">Projects</Link>
+                    </li>
                     <li className="topListItem">
-                        <Link className="link" to="/">CONTACTS</Link>
-                        </li>
+                        <Link className="link" to="/blog">Blog</Link>
+                    </li>
+                    <li className="topListItem">
+                        <Link className="link" to="/about">About</Link>
+                    </li>
                     {/* Since our user object will either be populated or null, we can call it
                         like a boolean; will return true if it exists, false if not; so we display
                         "LOGOUT" only if there is a user object aka if the user is logged in
@@ -48,6 +52,7 @@ export default function TopBar() {
                         {/*<Link className="link" to="/" onClick={handleLogout}>{user && "LOGOUT"}</Link>*/}
                     </li>
                 </ul>
+                <div className="topCenterIcon">hey</div>
             </div>
             <div className="topRight">
                 
