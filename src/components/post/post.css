@@ -24,6 +24,10 @@
     flex-direction: column;
 }
 
+.postCats {
+    height: 20px;
+}
+
 .postCat {
     font-family: "Varela Round", sans-serif;
     font-size: 11px;
@@ -36,7 +40,7 @@
 
 .postTitle {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 24px;
+    font-size: 42px;
     font-weight: 700;
     margin-top: 15px;
     cursor: pointer;

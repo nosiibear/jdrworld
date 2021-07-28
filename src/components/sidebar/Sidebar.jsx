@@ -6,14 +6,30 @@ import "./sidebar.css"
 export default function Sidebar() {
 
     const [cats,setCats] = useState([]);
+    const [years,setYears] = useState([]);
+
     useEffect(()=> {
-        const getCats = async ()=>
+        const getData = async ()=>
         {
-            const res = await axios.get("/api/categories");
-            setCats(res.data);
+            const res = await axios.get("https://brahma-restapi.herokuapp.com/api/data/categories");
+            filterData(res.data);
         };
-        getCats();
+        getData();
     },[])
+
+    const filterData = (data) => {
+        Object.keys(data).map(function(keyName, keyIndex) {
+            if(typeof data[keyName] === "number" && keyName !== "__v") {
+                addCat({keyName: keyName, valueName: data[keyName]});
+                console.log(keyName);
+            }
+        })
+    }
+
+    const addCat = (obj) => {
+        console.log("object");
+        console.log(obj);
+    }
 
     return (
         <div className="sidebar">
@@ -21,11 +37,12 @@ export default function Sidebar() {
                 <div className="sidebarItem">
                     <span className="sidebarTitle">CATEGORIES</span>
                     <ul className="sidebarList">
-                        {cats.map((c) => (
+                        {/*cats.map((c) => (
                             <Link to={`/?cat=${c.name}`} className="link">
                                 <li className="sidebarListItem">{c.name}</li>
                             </Link>
-                        ))}
+                        ))*/}
+                        {}
                     </ul>
                 </div>
                 <div className="sidebarItem">
