@@ -9,7 +9,7 @@ function CameraController() {
   const [cameraPosX, setCameraPosX] = useState(0);
   const [cameraPosZ, setCameraPosZ] = useState(0);
   const [cameraRot, setCameraRot] = useState(0);
-  const [rotAngle, setRotAngle] = useState(-3.5);
+  const [rotAngle, setRotAngle] = useState(-3);
 
   // Update it every frame
   useFrame((state) => {
@@ -216,6 +216,7 @@ export default function Home() {
             <br/>
             ROBINSON
           </div>
+          <div className="homeText">Click a link to get started.</div>
           <div className="linkButtonContainer">
             <div className="screenTrigger"
                  onPointerOver={() => {setBlack("false"); setVideoName("/about.mp4")}}

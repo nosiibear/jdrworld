@@ -113,3 +113,9 @@ body {
   font-size: 14px;
   pointer-events: none;
 }
+
+.homeText {
+  color: white;
+  font-size: 22px;
+  font-style: italic;
+}

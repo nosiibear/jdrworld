@@ -7,6 +7,7 @@ import Blog from "./pages/blog/Blog";
 import Single from "./pages/single/Single";
 import Projects from "./pages/projects/Projects"
 import Jdrworld from "./pages/project/Jdrworld";
+import About from "./pages/About/About";
 import {
   BrowserRouter as Router,
   Switch,
@@ -42,9 +43,9 @@ function App() {
         <Route path="/blog">
           <Blog/>
         </Route>
-        {/*<Route path="/about">
+        <Route path="/about">
           <About/>
-        </Route>*/}
+        </Route>
         <Route path="/post/:postId">
           <Single/>
         </Route>

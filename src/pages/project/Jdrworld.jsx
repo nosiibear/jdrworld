@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "./project.css"
 
 export default function Jdrworld() {
@@ -9,7 +10,7 @@ export default function Jdrworld() {
                 <p>An interactive portfolio and blog website, built on the MERN stack- MongoDB, Express, React and Node.js.&nbsp;
                 MDX allows each blog post to contain their own interactive JSX elements.&nbsp;
                 React-three-fiber powers the site's 3D homepage.</p>
-                <p>But best of all, you can follow my exact path of how I created this website here.</p>
+                <p>But best of all, you can follow my exact path of how I created this website <Link to="/post/61021aa538fc1e2aa2764633">here.</Link></p>
                 <p>This series of blog posts traces every tutorial I followed,
                 every question I had, every answer I came to, and notes for every single day I worked on the website.&nbsp;
                 I dove head-first into React, React Three Fiber, MongoDB, Netlify, Heroku, browser routing, web hosting, and web development in general.&nbsp;

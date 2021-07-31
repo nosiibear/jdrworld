@@ -10,23 +10,25 @@ export default function Projects() {
             <div className="projects">
                 <div className="projectContainer">
                     <div className="imgContainer">
-                        <img className="projectImg" src="https://res.cloudinary.com/beanboy/image/upload/v1626718138/reactblog/post_image_placeholder_vytptl.jpg"/>4
+                        <img className="projectImg" src="https://i.imgur.com/fdYO1ON.png"/>4
                     </div>
                     <Link className="link"to="/jdrworld">
-                        <div className="projectInfo">info</div>
+                        <div className="projectInfo">JDR.World</div>
                     </Link>
                 </div>
-                <div className="projectContainer">
+                {/*<div className="projectContainer">
                     <div className="imgContainer">
                         <ImgCollection variant="project" imgStyle="projectImg"/>
                     </div>
                     <div className="projectInfo">info</div>
-                </div>
+                </div>*/}
                 <div className="projectContainer">
-                    <div className="projectInfo">info</div>
-                </div>
-                <div className="projectContainer">
-                    <div className="projectInfo">info</div>
+                    <div className="imgContainer">
+                        <img className="projectImg" src="https://i.imgur.com/xF6W8wO.png"/>4
+                    </div>
+                    <a href="https://jdreactblog.netlify.app/" className="link"to="https://jdreactblog.netlify.app/">
+                        <div className="projectInfo">Hosting an Example Project</div>
+                    </a>
                 </div>
             </div>
         </div>

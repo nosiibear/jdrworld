@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Project() {
     return (
-        <div className="background">
-            <div className="projectContainer">
+        <div className="pageBackground">
+            <div className="pageContainer">
             
             </div>
         </div>
