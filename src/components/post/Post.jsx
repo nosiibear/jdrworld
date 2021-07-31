@@ -1,19 +1,27 @@
 import "./post.css";
 import { Link } from "react-router-dom"
+import Icon from "../icon/Icon"
 
 export default function Post({post}) {
     return (
         <div className="post">
             <div className="postInfo">
                 <div className="postCats">
-                    {post.categories.map((c)=> (
-                        <span className="postCat">{c}</span>
+                    {post.categories.map((c, idx)=> (
+                        <span className="postCat">{idx > 0 && " • "}{c}</span>
                     ))}
                 </div>
                 <Link to={`/post/${post._id}`} className="link">
                     <span className="postTitle">{post.title}</span>
                 </Link>
-                <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
+                <div className="horizontalContainer">
+                    <p className="postUsernameContainer">
+                        <Icon size="16px"/>
+                        <div className="postUsername">{post.username}</div>
+                    </p>
+                    <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
+                </div>
+                <p className="postDesc">{post.blurb}</p>
             </div>
             <Link to={`/post/${post._id}`} className="postImgContainer link">
             {
@@ -31,11 +39,6 @@ export default function Post({post}) {
                 />
             )}
             </Link>
-            {/* commenting this because I think just the title + image looks better
-            <p className="postDesc">
-                {post.desc}
-                </p>
-            */}
         </div>
     )
 }

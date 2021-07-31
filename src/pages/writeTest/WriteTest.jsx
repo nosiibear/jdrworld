@@ -8,16 +8,22 @@ export default function Write() {
     const [dynamicContent, setDynamicContent] = useState("# Hello MDX\nThis is a paragraph.\n<Test/>");
 
     const components = {
-        h1: (props) => <h1 {...props} className="text-xl font-light" />,
+        //h1: (props) => <h1 {...props} className="text-xl font-light" />,
+        h1: (props) => <h1 {...props} style={{color: "crimson"}} />,
         Test: Test
     };
     return (
     <div className="back">
         {/*<Layout>{Content}</Layout>*/}
-        <MDX components={components}>{dynamicContent}</MDX>
+        <div className="mdxRenderer">
+            <MDX components={components}>{dynamicContent}</MDX>
+        </div>
         <br/>
         <br/>
-        <textarea placeholder="meme" type="text" placeholder={Content} onChange={e=> setDynamicContent(Date.now())}></textarea>
+        <div className="mdxCreator">
+            {/*Date.now()*/}
+            <textarea placeholder="meme" type="text" placeholder={Content} onChange={e=> setDynamicContent(e.target.value)}></textarea>
+        </div>
     </div>
     );
 }

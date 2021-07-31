@@ -1,3 +1,20 @@
 .back {
     padding-top: 100px;
+    background-color: #ddd;
+    width: 50%;
+    margin: auto;
+}
+
+.mdxRenderer {
+    width: 800px;
+    background-color: #bbb;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.mdxCreator {
+    width: 800px;
+    background-color: #bbb;
+    margin-left: 10px;
+    padding-left: 10px;
 }

@@ -33,6 +33,8 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .fiberTopLeft {

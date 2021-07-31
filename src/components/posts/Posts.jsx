@@ -12,7 +12,6 @@ export default function Posts({posts}) {
             posts.map((p)=> (
                 <Post post={p}/>
             ))}
-            Hi costco :) Site still under construction
         </div>
     );
 }

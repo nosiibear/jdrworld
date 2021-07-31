@@ -3,12 +3,13 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import { BackSide, VideoTexture } from "three";
 import "./home.css"
+import Icon from "../../components/icon/Icon"
 
 function CameraController() {
   const [cameraPosX, setCameraPosX] = useState(0);
   const [cameraPosZ, setCameraPosZ] = useState(0);
   const [cameraRot, setCameraRot] = useState(0);
-  const [rotAngle, setRotAngle] = useState(-2);
+  const [rotAngle, setRotAngle] = useState(-3.5);
 
   // Update it every frame
   useFrame((state) => {
@@ -106,11 +107,11 @@ export default function Home() {
   const [pagePosition, setPagePosition] = useState(0);
   const [video, setVideo] = useState();
   const [videoName, setVideoName] = useState(
-    "https://va.media.tumblr.com/tumblr_qurs42reg81z8nwq1.mp4"
+    "/projects.mp4"
   );
   const [black, setBlack] = useState("true");
   const [videoNameUnspammed, setVideoNameUnspammed] = useState(
-    "https://va.media.tumblr.com/tumblr_qurs42reg81z8nwq1.mp4"
+    "/about.mp4"
   );
   const [blackUnspammed, setBlackUnspammed] = useState("true");
 
@@ -140,8 +141,8 @@ export default function Home() {
         console.log(err);
       }
     };
-    makeVideo("https://va.media.tumblr.com/tumblr_qurs42reg81z8nwq1.mp4");
-  }, [videoName]);
+    makeVideo("/portfolio.mp4");
+  }, [videoNameUnspammed]);
 
   const onScroll = (e) => {
     setPagePosition(e.target.scrollTop)
@@ -155,10 +156,10 @@ export default function Home() {
         <spotLight castShadow angle={1} intensity={0.4} position={[6, 23, -6]}  penumbra={1} decay={10}/>
         <spotLight castShadow angle={1} intensity={0.4} position={[-6, 23, 6]}  penumbra={1} decay={10}/>
         <spotLight castShadow angle={1} intensity={0.4} position={[-6, 23, -6]} penumbra={1} decay={10}/>*/}
-        <spotLight castShadow angle={0.8} intensity={0.4} position={[6, 23, 6]}   penumbra={1} decay={10}/>
-        <spotLight castShadow angle={0.8} intensity={0.4} position={[6, 23, -6]}  penumbra={1} decay={10}/>
-        <spotLight castShadow angle={0.8} intensity={0.4} position={[-6, 23, 6]}  penumbra={1} decay={10}/>
-        <spotLight castShadow angle={0.8} intensity={0.4} position={[-6, 23, -6]} penumbra={1} decay={10}/>
+        <spotLight color={0xfffacc} castShadow angle={0.8} intensity={0.4} position={[6, 23, 6]}   penumbra={1} decay={10}/>
+        <spotLight color={0xfffacc} castShadow angle={0.8} intensity={0.4} position={[6, 23, -6]}  penumbra={1} decay={10}/>
+        <spotLight color={0xfffacc} castShadow angle={0.8} intensity={0.4} position={[-6, 23, 6]}  penumbra={1} decay={10}/>
+        <spotLight color={0xfffacc} castShadow angle={0.8} intensity={0.4} position={[-6, 23, -6]} penumbra={1} decay={10}/>
 
         <Plane position={[0, 10, 10]}  rotation={[Math.PI, 0, 0]} />
         <Plane position={[0, 10, -10]} />
@@ -190,7 +191,7 @@ export default function Home() {
         <div className="homeContent" style={{ height: `${3 * 100}vh`}}>
           <div className="fiberTopBar">
             <div className="fiberTopLeft">
-              <div>icon</div>
+              <Icon size="30px"/>
             </div>
             <div className="fiberTopCenter">
               <ul className="fiberTopList">
@@ -217,7 +218,7 @@ export default function Home() {
           </div>
           <div className="linkButtonContainer">
             <div className="screenTrigger"
-                 onPointerOver={() => {setBlack("false"); setVideoName("about")}}
+                 onPointerOver={() => {setBlack("false"); setVideoName("/about.mp4")}}
                  onPointerOut={() => setBlack("true")}>
               <button className="linkButton"
                       onClick={() => window.appHistory.push("/about")}>
@@ -234,7 +235,7 @@ export default function Home() {
               <i className="btnIcon fas fa-angle-right"></i>
             </button></div>
             <div className="screenTrigger"
-                 onPointerOver={() => {setBlack("false"); setVideoName("//dm0qx8t0i9gc9.cloudfront.net/watermarks/videoGTYSdDW/videoblocks-gili-meno-turtles-underwater-360-vr-underwater-360-vr_H5tBLnQaW__25198781bb64ff033995b16494232071__P640.mp4")}}
+                 onPointerOver={() => {setBlack("false"); setVideoName("/projects.mp4")}}
                  onPointerOut={() => setBlack("true")}>
               <button className="linkButton"
                       onClick={() => window.appHistory.push("/projects")}>
@@ -243,7 +244,7 @@ export default function Home() {
             </button>
             </div>
             <div className="screenTrigger"
-                 onPointerOver={() => {setBlack("false"); setVideoName("blog")}}
+                 onPointerOver={() => {setBlack("false"); setVideoName("blog.mp4")}}
                  onPointerOut={() => setBlack("true")}>
               <button className="linkButton"
                       onClick={() => window.appHistory.push("/blog")}>

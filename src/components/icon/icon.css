@@ -1,0 +1,57 @@
+
+.cubeContainer {
+    --cubeSize: 50px;
+    /*perspective: 30px;*/
+}
+
+.cube {
+    width: var(--cubeSize);
+    height: var(--cubeSize);
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(35.5deg) rotateY(45deg);
+    margin: 5px;
+}
+
+/*.cube.is-spinning {
+    animation: spinCube 8s infinite ease-in-out;
+}
+  
+@keyframes spinCube {
+    0% { transform:  rotateX(  0deg) rotateY(  0deg); }
+    100% { transform:  rotateX(360deg) rotateY(360deg); }
+}
+*/
+.face {
+    font-family: "Rubik Mono One", sans-serif;
+    font-size: 80px;
+    background-color: black;
+    position: absolute;
+    width: var(--cubeSize);
+    height: var(--cubeSize);
+    border: calc(var(--cubeSize) / 15) solid white;
+    line-height: 200px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    /*opacity: 50%;*/
+}
+
+.front  {
+    transform: rotateY(  0deg) translateZ(calc(var(--cubeSize) / 2));
+}
+.right  {
+    transform: rotateY( 90deg) translateZ(calc(var(--cubeSize) / 2));
+}
+.back   {
+    transform: rotateY(180deg) translateZ(calc(var(--cubeSize) / 2));
+}
+.left   {
+    transform: rotateY(-90deg) translateZ(calc(var(--cubeSize) / 2));
+}
+.top    {
+    transform: rotateX( 90deg) translateZ(calc(var(--cubeSize) / 2));
+}
+.bottom {
+    transform: rotateX(-90deg) translateZ(calc(var(--cubeSize) / 2));
+}

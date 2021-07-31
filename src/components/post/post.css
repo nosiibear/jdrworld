@@ -1,5 +1,5 @@
 .post {
-    width: 1000px;
+    width: 950px;
     margin: 0px 0px 20px 0px;
     flex-direction: row;
     justify-content: flex-start;
@@ -12,7 +12,7 @@
 }
 
 .postImg {
-    height: 200px;
+    height: 300px;
     width: 100%;
     object-fit: cover;
     border-radius: 7px;
@@ -22,41 +22,60 @@
     width: 66%;
     display: flex;
     flex-direction: column;
+    padding-right: 25px;
 }
 
 .postCats {
     height: 20px;
+    margin-bottom: 10px;
 }
 
 .postCat {
-    font-family: "Varela Round", sans-serif;
-    font-size: 11px;
-    color: #be9656;
+    /*font-size: 16px;*/
     line-height: 20px;
     margin-top: 15px;
-    margin-right: 10px;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 .postTitle {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 42px;
+    font-family: 'Overpass', sans-serif;
+    font-size: 36px;
     font-weight: 700;
-    margin-top: 15px;
     cursor: pointer;
 }
 
+.horizontalContainer {
+    margin-top: 5px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: horizontal;
+    justify-content: space-between;
+}
+
+.postUsernameContainer {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Prompt', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    align-items: center;
+}
+
+.postUsername {
+    margin-left: 5px;
+}
+
 .postDate {
-    font-family: 'Lora', serif;
-    font-style: italic;
-    font-size: 13px;
+    /*font-size: 13px;*/
     color: #999;
-    margin-top: 15px;
+    text-transform: uppercase;
+    margin-top: 4px;
 }
 
 .postDesc {
-    font-family: 'Varela Round', sans-serif;
-    font-size: 14px;
+    /*font-size: 14px;*/
+    font-style: italic;
     color: #444;
     line-height: 24px;
     margin-top: 15px;

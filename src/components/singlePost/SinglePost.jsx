@@ -1,9 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom"
+import MDX from "@mdx-js/runtime"
+import Test from "../../pages/writeTest/Test"
 //import { Context } from "../../context/Context";
 import "./singlePost.css";
 import axios from "axios";
+import Icon from "../icon/Icon"
 
 export default function SinglePost() {
     const location = useLocation()
@@ -14,6 +17,14 @@ export default function SinglePost() {
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
     //const [updateMode, setUpdateMode] = useState(false);
+
+    const components = {
+        //h1: (props) => <h1 {...props} className="text-xl font-light" />,
+        //h1: (props) => <h1 {...props} style={{color: "crimson"}} />,
+        Test: Test,
+        //img: (props) => <img {...props} style={{position: "relative", left: "-270px", width: "60vw"}}/>
+        img: (props) => <img {...props} style={{maxWidth: "41vw", marginLeft: "-60px", marginTop: "20px", marginBottom: "20px", boxShadow: "0px 5px 10px 0px rgba(0, 0, 0, 0.3)"}}/>
+    };
     
     /*useEffect(()=> {
         const refreshUserData = async ()=> {
@@ -34,7 +45,7 @@ export default function SinglePost() {
 
     useEffect(()=> {
         const getPost = async ()=>{
-            const res = await axios.get("https://jdrworld.herokuapp.com/api/posts/"+path)
+            const res = await axios.get("https://brahma-restapi.herokuapp.com/api/posts/"+path)
             console.log(res);
             setPost(res.data);
             setTitle(res.data.title);
@@ -95,11 +106,13 @@ export default function SinglePost() {
                         </h1>
                     /*)*/
                 }
+                <span className="singlePostBlurb">{post.blurb}</span>
                 <div className="singlePostInfo">
                     <span className="singlePostAuthor">
-                    Author: 
+                    <div style={{marginRight: "10px"}}>Author:</div>
+                    <Icon size={"20px"}/>  
                     <Link to={`/?user=${post.username}`} className="link">
-                        <b>{post.username}</b>
+                        {post.username}
                     </Link>
                     </span>
                     <span className="singlePostDate">{new Date(post.createdAt).toDateString()}</span>
@@ -116,7 +129,9 @@ export default function SinglePost() {
                         </button>
                     </>
                 ) : (*/
-                    <p className = "singlePostDesc">{desc}</p>
+                    <p className="singlePostDesc">
+                        <MDX components={components}>{desc}</MDX>
+                    </p>
                 /*)*/}
             </div>
         </div>

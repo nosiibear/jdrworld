@@ -5,6 +5,8 @@ import IconTest from "./pages/IconTest";
 import WriteTest from "./pages/writeTest/WriteTest";
 import Blog from "./pages/blog/Blog";
 import Single from "./pages/single/Single";
+import Projects from "./pages/projects/Projects"
+import Jdrworld from "./pages/project/Jdrworld";
 import {
   BrowserRouter as Router,
   Switch,
@@ -31,9 +33,12 @@ function App() {
         <Route path="/iconTest">
           <IconTest/>
         </Route>
-        {/*<Route path="/projects">
+        <Route path="/projects">
           <Projects/>
-        </Route>*/}
+        </Route>
+        <Route path="/jdrworld">
+          <Jdrworld/>
+        </Route>
         <Route path="/blog">
           <Blog/>
         </Route>

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 //import { Context } from "../../context/Context";
 import "./topbar.css"
+import Icon from "../icon/Icon"
 
 export default function TopBar() {
     // getting user object from our context
@@ -20,13 +21,12 @@ export default function TopBar() {
     return (
         <div className="top">
             <div className="topLeft">
-                <i className="topIcon fab fa-facebook-square"></i>
-                <i className="topIcon fab fa-twitter-square"></i>
-                <i className="topIcon fab fa-pinterest-square"></i>
-                <i className="topIcon fab fa-instagram-square"></i>
+                <Icon size="22px"/>
+                <div className="topLeftTitle">J. D. ROBINSON</div>
+                <div/>
             </div>
             <div className="topCenter">
-                <div className="topCenterIcon">hey</div>
+                <div className="topCenterIcon"></div>
                 <ul className="topList">
                     <li className="topListItem">
                         <Link className="link" to="/">Home</Link>
@@ -52,7 +52,7 @@ export default function TopBar() {
                         {/*<Link className="link" to="/" onClick={handleLogout}>{user && "LOGOUT"}</Link>*/}
                     </li>
                 </ul>
-                <div className="topCenterIcon">hey</div>
+                <div className="topCenterIcon"></div>
             </div>
             <div className="topRight">
                 
@@ -91,7 +91,7 @@ export default function TopBar() {
                         </li>
                     </ul>
                 )} */}
-                <i className="topSearchIcon fas fa-search"></i>
+                {/*<i className="topSearchIcon fas fa-search"></i>*/}
             </div>
         </div>
     )
