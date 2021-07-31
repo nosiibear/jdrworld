@@ -10,9 +10,9 @@ export default function Portfolio() {
                 <br/>
                 <p>I'm Jonathan, a student developer and multimedia artist. I like coding, making 3D art, designing sounds, and doing student films.</p>
                 <p>I haven't worked on many websites, but here's a few.</p>
-                <p>Click <Link to="/jdrworld">here</Link> if you want to know more about how I made this site. &nbsp; &nbsp; &nbsp;
+                <p>Click <Link to="/jdrworld">here</Link> if you want to know more about how I made this site.
                 As part of a web development tutorial, I completed the example project, which I have also hosted <a href="https://jdreactblog.netlify.app">here.</a>
-                You can find the source code for that <a href="https://github.com/nausniboar/reactblogclient">here.</a></p>
+                You can find the source code for that <a href="https://github.com/nausniboar/reactblogclient">here.</a></p> More information on this project can be found in the first link.
                 <p>I also created a <a href="https://codepen.io/nausniboar/pen/WNooQEP">tribute page</a> to one of my favorite directors,
                 which was the result of a self-directed exercise from the FreeCodeCamp curriculum.</p>
                 <p>I also do location sound and post audio for student films. I've worked on several of these films, but not many have a web presence. However, my most
